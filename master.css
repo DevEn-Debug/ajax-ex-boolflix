@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Mulish', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141414;
+  color: white;
+}
+
+#logo {
+  color: #e50914;
+}
+
+#select {
+  font-size: 20px;
+}
+
+header {
+  background-color: black;
+  width: 100%;
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+}
+
+#selectSerieFilm {
+  color: white;
+  border: none;
+  font-size: 15px;
+  border-color: black;
+  background-color: transparent;
+}
+
+#selectSerieFilm option {
+  font-size: 15px;
+  background: black;
+}
+
+#lenteRicerca {
+  cursor: pointer;
+  margin-left: 30px;
+  font-size: 15px;
+}
+
+#ricerca {
+  margin-left: 5px;
+  border: 0;
+  border-bottom: 1px solid #555;
+  background: transparent;
+  font-size: 16px;
+  color: #fff;
+}
+
+#ricerca:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #e50914;
+}
+
+#risultati {
+  width: 1900px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 0 30px 0;
+}
+
+#filmlist, #serielist {
+  display: block;
+  width: 1800px;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid white;
+}
+
+#filmlist a, #serielist a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.film, .serie {
+  cursor: pointer;
+  display: flex;
+  flex-basis: 342px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 520px;
+  text-align: center;
+  background-color: black;
+}
+
+.film .img img, .serie .img img {
+  width: 342px;
+  height: 520px;
+}
+
+.infoFilm, .infoSerie {
+  display: none;
+  flex-basis: 342px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 20px;
+  text-align: center;
+}
+
+.active {
+  display: flex;
+  flex-basis: 342px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 20px;
+  min-height: 350px;
+  text-align: center;
+}
+
+.film h3, .serie h3 {
+  margin: 20px 0;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.film h5, .serie h5 {
+  margin: 20px 0;
+  color: white;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.film h6.title, .film h6.language, .serie h6.title, .serie h6.language {
+  color: grey;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.film h6.language img, .serie h6.language img {
+  width: 27px;
+  height: 15px;
+}
+
+.film h6.vote, .serie h6.vote {
+  color: red;
+  font-size: 13px;
+}
+
+.fa-star:before {
+  font-size: 20px;
+}

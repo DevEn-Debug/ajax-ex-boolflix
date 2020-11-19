@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Boolflix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="master.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+  <script id="film-list" type="text/x-handlebars-template">
+    <h2 id="filmlist"><a href="#">Film corrispondeti a : "{{search}}"</a></h2>
+    </script>
+
+  <script id="serie-list" type="text/x-handlebars-template">
+    <h2 id="serielist"><a href="#">Serie corrispondeti a : "{{search}}"</a></h2>
+    </script>
+
+  <script id="template-film" type="text/x-handlebars-template">
+    <div class="film" >
+        <div class="img">
+          <img src="https://image.tmdb.org/t/p/w342{{poster_path}}" onerror="this.onerror=null; this.src='https://image.shutterstock.com/image-vector/404-not-found-problem-disconnect-600w-721322569.jpg'" alt="">
+      </div>
+      <div class="infoFilm">
+        <h5>{{title}}</h5>
+        <h6 class="title">Titolo Originale: {{original_title}}</h6>
+              <h6 class="language">Lingua: {{{original_language}}} </h6>
+        <h6 class="vote">{{{vote_average}}}</h6>
+        <h6 class="language">Attori principali: {{{actor}}}</h6>
+      </div>
+      </script>
+
+  <script id="template-serie" type="text/x-handlebars-template">
+    <div class="serie">
+        <div class="img">
+          <img src="https://image.tmdb.org/t/p/w342{{poster_path}}" onerror="this.onerror=null; this.src='https://image.shutterstock.com/image-vector/404-not-found-problem-disconnect-600w-721322569.jpg'" alt="">
+            </div>
+        <div class="infoSerie">
+        <h5>{{name}}</h5>
+        <h6 class="title">Titolo Originale: {{original_name}}</h6>
+        <h6 class="language">Lingua: {{{original_language}}} </h6>
+        <h6 class="vote">{{{vote_average}}}</h6>
+                <h6 class="language">Attori principali: {{{actor}}}</h6>
+      </div>
+      </div>
+    </script>
+
+  <script src="main.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <header>
+    <div id="logo">
+      <h1><a href="https://fontmeme.com/netflix-font/"><img src="https://fontmeme.com/permalink/200728/d65c8f65d982a2739f70f57922701228.png" alt="netflix-font" border="0"></a></h1>
+    </div>
+    <div id="select">
+      <select id="selectSerieFilm" class="" name="">
+        <option value="Entrambi">Entrambi</option>
+        <option value="Film">Film</option>
+        <option value="SerieTv">Serie Tv</option>
+      </select>
+      <i id="lenteRicerca" class="fas fa-search"></i>
+      <input id="ricerca" type="text" name="" value="" placeholder="Search...">
+    </div>
+
+  </header>
+  <main>
+    <div id="risultati"></div>
+  </main>
+</body>
+
+</html>
